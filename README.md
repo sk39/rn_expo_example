@@ -1,7 +1,7 @@
 TODO: Under construction
 
 # rn_expo_example
-Example projectys to try Expo and ecosystem.
+Example projectys to trial React Native (Expo) and ecosystem.
 
 Expo + Typescript + Mobx.
 
