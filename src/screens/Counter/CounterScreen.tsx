@@ -6,7 +6,7 @@ import CounterStore from "./CounterStore";
 import TabBarIcon from "../../navigation/TabNaviator/TabBarIcon";
 
 @observer
-export default class CounterScreen extends Component {
+export default class CounterScreen extends Component<NavigationProps> {
 
     static navigationOptions = {
         title: 'Counter Example',
@@ -35,7 +35,18 @@ export default class CounterScreen extends Component {
     store: CounterStore = new CounterStore();
 
     componentDidMount() {
-        this.store.startCount();
+        this.props.navigation.addListener(
+            'didFocus',
+            payload => {
+                this.store.startCount();
+            }
+        );
+        this.props.navigation.addListener(
+            'willBlur',
+            payload => {
+                this.store.stopCount();
+            }
+        );
     }
 
     render() {

@@ -2,6 +2,7 @@ import React from "react";
 import {StyleSheet, View} from "react-native";
 import {Button, Text} from "native-base";
 import LottieView from "lottie-react-native";
+import Colors from "../../constants/Colors";
 
 export default class LottieScreen extends React.Component {
 
@@ -51,7 +52,7 @@ export default class LottieScreen extends React.Component {
 
 const styles = StyleSheet.create({
     animationContainer: {
-        backgroundColor: '#111',
+        backgroundColor: Colors.backColor,
         alignItems: 'center',
         justifyContent: 'center',
         flex: 1,
@@ -63,7 +64,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#444',
-        borderRadius: 26,
         width: 256,
     }
 });

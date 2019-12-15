@@ -3,3 +3,7 @@ declare module "*.svg" {
     const content: React.FC<SvgProps>;
     export default content;
 }
+
+interface NavigationProps {
+    navigation: any, //TODO:
+}

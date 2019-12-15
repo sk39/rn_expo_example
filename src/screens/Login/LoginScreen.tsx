@@ -8,14 +8,10 @@ import {LinearGradient} from 'expo-linear-gradient';
 import Logo from "@assets/logo.svg";
 import PageLoading from '@common/components/PageLoading';
 import Input from "@common/components/Input/Input";
-
-interface Props {
-    navigation: any,
-}
+import Colors from "../../constants/Colors";
 
 @observer
-export default class LoginScreen extends Component<Props> {
-
+export default class LoginScreen extends Component<NavigationProps> {
 
     store: LoginStore = new LoginStore();
 
@@ -80,11 +76,11 @@ export default class LoginScreen extends Component<Props> {
     }
 }
 
-// TODO: Define color
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#24262a',
+        backgroundColor: Colors.backColor
     },
     logo: {
         width: 108,
@@ -101,18 +97,17 @@ const styles = StyleSheet.create({
     },
     btn: {
         marginTop: 24,
-        backgroundColor: '#a376c2',
+        backgroundColor: Colors.primaryColor,
         borderRadius: 26,
         width: 256,
     },
     btnText: {
-        color: '#f1f1f1',
-        // backgroundColor: '#c7b6cc',
+        color: Colors.fontColor,
     },
     link: {
         marginTop: 16
     },
     linkText: {
-        color: '#f1f1f1'
+        color: Colors.fontColor
     }
 });
