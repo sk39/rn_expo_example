@@ -4,9 +4,10 @@ import {AppLoading} from "expo";
 import * as Font from 'expo-font';
 import {Feather, Ionicons} from '@expo/vector-icons';
 import {observable} from "mobx";
-import {observer} from "mobx-react";
-import RootStack from "./src/screens/RootStack";
+import {observer, Provider} from "mobx-react";
+import RootStack from "./src/navigation/RootStack";
 import {createAppContainer} from "react-navigation";
+import RootStoreProvider from "./src/store/RootStoreProvider";
 
 const AppContainer = createAppContainer(RootStack);
 
@@ -30,6 +31,10 @@ export default class App extends React.Component {
             return <AppLoading/>;
         }
 
-        return <AppContainer/>;
+        return (
+            <Provider rootStore={RootStoreProvider.rootStore}>
+                <AppContainer/>
+            </Provider>
+        )
     }
 }

@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import {StyleSheet} from 'react-native';
+import {Platform, StyleSheet} from 'react-native';
 import {observer} from "mobx-react";
 import {Container, Text} from 'native-base';
 import CounterStore from "./CounterStore";
+import TabBarIcon from "../../navigation/TabNaviator/TabBarIcon";
 
 @observer
 export default class CounterScreen extends Component {
@@ -16,6 +17,19 @@ export default class CounterScreen extends Component {
         headerTitleStyle: {
             fontWeight: 'bold',
         },
+        headerBackTitleVisible: false,
+        tabBarLabel: "Counter",
+        tabBarIcon: ({focused, tintColor}) => (
+            <TabBarIcon
+                focused={focused}
+                color={tintColor}
+                name={
+                    Platform.OS === 'ios'
+                        ? `ios-information-circle${focused ? '' : '-outline'}`
+                        : 'md-information-circle'
+                }
+            />
+        )
     };
 
     store: CounterStore = new CounterStore();

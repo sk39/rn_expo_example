@@ -16,10 +16,6 @@ interface Props {
 @observer
 export default class LoginScreen extends Component<Props> {
 
-    static navigationOptions = {
-        header: null,
-        tabBarVisible: false,
-    };
 
     store: LoginStore = new LoginStore();
 
@@ -42,7 +38,7 @@ export default class LoginScreen extends Component<Props> {
 
     render() {
         return (
-            <Container >
+            <Container>
                 <PageLoading loading={this.store.processing}/>
                 <LinearGradient
                     colors={['#24262a', '#101113', '#292d4e', '#a376c2']}

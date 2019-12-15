@@ -1,7 +1,7 @@
 {
   "name": "rn_expo_example",
   "version": "0.0.1",
-  "description": "Expo (React Native) example",
+  "description": "Example projects to trial React Native (Expo) and ecosystem.",
   "author": "sk39",
   "license": "MIT",
   "main": "node_modules/expo/AppEntry.js",
@@ -13,9 +13,13 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@expo/samples": "^3.0.3",
+    "@sk39/lottie-files": "0.0.1",
     "expo": "^36.0.0",
     "expo-font": "~8.0.0",
     "expo-linear-gradient": "~8.0.0",
+    "expo-web-browser": "~8.0.0",
+    "lodash": "^4.17.15",
     "mobx": "^5.15.0",
     "mobx-react": "^6.1.4",
     "moment": "^2.24.0",
@@ -25,10 +29,16 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-36.0.0.tar.gz",
     "react-native-elements": "^1.2.7",
     "react-native-gesture-handler": "~1.5.0",
+    "react-native-paper": "^3.3.0",
+    "react-native-reanimated": "~1.4.0",
     "react-native-svg": "9.13.3",
     "react-native-web": "^0.11.7",
     "react-navigation": "^4.0.10",
-    "react-navigation-stack": "^1.10.3"
+    "react-navigation-drawer": "^2.3.3",
+    "react-navigation-material-bottom-tabs": "^2.1.5",
+    "react-navigation-stack": "^1.10.3",
+    "react-navigation-tabs": "^2.6.2",
+    "lottie-react-native": "~2.6.1"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.7.4",

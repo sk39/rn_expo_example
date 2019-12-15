@@ -3,6 +3,8 @@ import {Input as ElInput} from "react-native-elements";
 import {StyleSheet} from "react-native";
 import InputState from "./InputState";
 import {observer} from "mobx-react";
+import Colors from "../../../constants/Colors";
+import Layout from "../../../constants/Layout";
 
 interface Props {
     inputState: InputState,
@@ -30,14 +32,13 @@ export default class Input extends Component<Props> {
     }
 }
 
-// TODO: Define color
 const styles = StyleSheet.create({
     input: {
-        color: '#f1f1f1',
+        color: Colors.fontColor,
         paddingLeft: 16
     },
     inputContainer: {
-        width: 300, // TODO: auto
+        width: Layout.input.width,
         paddingBottom: 24
     },
     inputError: {
