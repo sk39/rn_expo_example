@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Monero</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="crypto" transform="translate(-86.000000, -205.000000)">
+            <g id="Monero" transform="translate(86.000000, 205.000000)">
+                <g id="Group">
+                    <path d="M58.1,48.4430769 L45.6,48.4430769 L45.6,31.5076923 L31.7,45.1938462 L17.8,31.5076923 L17.8,48.4430769 L5.3,48.4430769 L4.9,48.4430769 C10.5,57.2061538 20.4,63.1138462 31.7,63.1138462 C43,63.1138462 52.9,57.3046154 58.5,48.4430769 L58.1,48.4430769 Z" id="Shape" fill="#4C4C4C" fill-rule="nonzero"></path>
+                    <path d="M11.2,41.9446154 L11.2,15.9507692 L31.7,36.1353846 L52.2,15.9507692 L52.2,41.9446154 L61.7,41.9446154 C62.8,38.7938462 63.4,35.4461538 63.4,31.9015385 C63.4,14.6707692 49.2,0.689230769 31.7,0.689230769 C14.2,0.689230769 0,14.6707692 0,31.9015385 C0,35.4461538 0.6,38.7938462 1.7,41.9446154 L11.2,41.9446154 L11.2,41.9446154 Z" id="Shape" fill="#FF6B01" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

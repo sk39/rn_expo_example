@@ -8,6 +8,6 @@ export default {
     tintColor,
     tabDefault: tintColor,
     tabSelected: "#ffccec",
-    tabBar: '#322e33',
+    tabBar: '#1a1c23',
 
 };

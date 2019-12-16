@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>xrp</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="crypto" transform="translate(-227.000000, -208.000000)">
+            <g id="xrp" transform="translate(227.000000, 208.000000)">
+                <g>
+                    <circle id="Oval" fill="#23292F" fill-rule="nonzero" cx="32" cy="32" r="32"></circle>
+                    <path d="M46.14,16 L51.92,16 L39.89,27.914 C35.5136322,32.2258002 28.4863678,32.2258002 24.11,27.914 L12.07,16 L17.86,16 L27,25.046 C29.7697055,27.7797701 34.2222945,27.7797701 36.992,25.046 L46.14,16 Z M17.79,49.126 L12,49.126 L24.11,37.14 C28.4863678,32.8281998 35.5136322,32.8281998 39.89,37.14 L52,49.124 L46.21,49.124 L37,40 C34.2302945,37.2662299 29.7777055,37.2662299 27.008,40 L17.788,49.126 L17.79,49.126 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
