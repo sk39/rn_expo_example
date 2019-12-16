@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         bottom: 0,
         right: 0,
         left: 0,
-        height: 112,
+        height: 100,
         marginHorizontal: 16,
     },
     flexContainer: {

@@ -70,7 +70,7 @@ export default class Button extends Component<Props, State> {
 const styles = StyleSheet.create({
     iconContainer: {
         width: 160,
-        height: 56,
+        height: 44,
         borderRadius: 10,
         alignItems: 'center',
         justifyContent: 'center',
