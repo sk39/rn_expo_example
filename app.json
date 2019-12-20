@@ -2,6 +2,7 @@
   "expo": {
     "name": "rn_expo_example",
     "slug": "rn_expo_example",
+    "description": "Example projects to trial React Native (Expo) and ecosystem.",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
@@ -15,7 +16,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#101113"
+      "backgroundColor": "#292c37"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

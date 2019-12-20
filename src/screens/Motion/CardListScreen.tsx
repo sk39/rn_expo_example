@@ -1,27 +1,25 @@
 import React, {Component} from 'react';
-import {InteractionManager, Platform, StyleSheet, View} from 'react-native';
+import {EasingFunction, InteractionManager, StyleSheet, View} from 'react-native';
 import {SharedElementRenderer} from 'react-native-motion';
 
 import List from './components/List/List';
 import Detail from './components/Detail/Detail';
 import ToolbarBackground from './components/Detail/ToolbarBackground';
 import Colors from "../../constants/Colors";
-import TabBarIcon from "../../navigation/TabNaviator/TabBarIcon";
+import {TabBarIcon} from "@common/components/ScreenIcon";
+
+declare module "react-native" {
+    interface EasingStatic {
+        back(s?: number): EasingFunction;
+    }
+}
 
 export default class CardListScreen extends Component<any, any> {
 
     static navigationOptions = {
         tabBarLabel: "Motion",
-        tabBarIcon: ({focused, tintColor}) => (
-            <TabBarIcon
-                focused={focused}
-                color={tintColor}
-                name={
-                    Platform.OS === 'ios'
-                        ? `ios-card`
-                        : 'md-card'
-                }
-            />
+        tabBarIcon: ({focused}) => (
+            <TabBarIcon screenName="Motion" focused={focused}/>
         )
     };
 

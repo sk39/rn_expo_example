@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {ActivityIndicator, Modal, StyleSheet, View} from "react-native";
+import Colors from "../../constants/Colors";
 
 interface Props {
     loading?: boolean,
@@ -12,9 +13,9 @@ export default class PageLoading extends Component<Props> {
 
     static defaultProps = {
         loading: false,
-        indicatorColor: "#a376c2",
+        indicatorColor: Colors.primaryColor,
         indicatorBackgroundColor: "#fff",
-        disablesLayerBackgroundColor: "rgba(41,35,51,0.5)"
+        disablesLayerBackgroundColor: Colors.disablesLayer
     };
 
     render() {

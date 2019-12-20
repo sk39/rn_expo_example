@@ -42,12 +42,13 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     titleText: {
-        fontSize: 12,
+        fontSize: 14,
         color: 'gray'
     },
     valueText: {
+        paddingTop: 2,
         fontSize: 16,
-        fontWeight: '900',
+        // fontWeight: '900',
         color: "#f1f1f1"
     }
 });

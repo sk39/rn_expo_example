@@ -1,69 +1,62 @@
-import React from "react";
-import {StyleSheet, View} from "react-native";
-import {Button, Text} from "native-base";
-import LottieView from "lottie-react-native";
+import React, {Component} from "react";
+import {StyleSheet} from "react-native";
+import {Container, Tab, Tabs} from "native-base";
+import LottieViewItem from "./LottieViewItem";
 import Colors from "../../constants/Colors";
+import {createStackNavigator} from "react-navigation-stack";
 
-export default class LottieScreen extends React.Component {
+class LottieScreen extends Component {
 
-    private animation: any;
-
-    constructor(props) {
-        super(props);
-        this.playAnimation = this.playAnimation.bind(this);
-    }
-
-    componentDidMount() {
-        this.animation.play();
-        // Or set a specific startFrame and endFrame with:
-        // this.animation.play(30, 120);
-    }
-
-    playAnimation() {
-        this.animation.play();
+    static navigationOptions = {
+        title: 'Lottie Examples',
+        headerStyle: {backgroundColor: Colors.tabBar},
+        headerTitleStyle: {color: '#a0a1ba'}
     };
 
     render() {
         return (
-            <View style={styles.animationContainer}>
-                <LottieView
-                    loop={false}
-                    ref={animation => {
-                        this.animation = animation;
-                    }}
-                    style={{
-                        width: 320,
-                        height: 320,
-                    }}
-                    source={require('@sk39/lottie-files/dist/error-icon.json')}
-                    // OR find more Lottie files @ https://lottiefiles.com/featured
-                    // Just click the one you like, place that file in the 'assets' folder to the left, and replace the above 'require' statement
-                />
-                <View style={styles.buttonContainer}>
-                    <Button style={styles.btn}
-                            onPress={this.playAnimation}>
-                        <Text>Play</Text>
-                    </Button>
-                </View>
-            </View>
+            <Container style={{backgroundColor: Colors.backColor, paddingBottom: 30}}>
+                <Tabs tabBarUnderlineStyle={{backgroundColor: Colors.linkColor}}>
+                    {[
+                        require("@sk39/lottie-files/dist/error-icon.json"),
+                        require('@sk39/lottie-files/dist/error-icon2.json'),
+                        require('@sk39/lottie-files/dist/error-icon-bounce.json'),
+                        require('@sk39/lottie-files/dist/success-icon.json'),
+                        require('@sk39/lottie-files/dist/success-icon-bounce.json')
+                    ].map((source, index) => {
+                        return (
+                            <Tab key={index}
+                                 tabStyle={styles.tab}
+                                 textStyle={styles.tabText}
+                                 activeTabStyle={styles.activeTab}
+                                 activeTextStyle={styles.activeTabText}
+                                 heading={`Tab${index + 1}`}>
+                                <LottieViewItem
+                                    newJsonType={index >= 3}
+                                    source={source}/>
+                            </Tab>
+                        )
+                    })}
+                </Tabs>
+            </Container>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    animationContainer: {
-        backgroundColor: Colors.backColor,
-        alignItems: 'center',
-        justifyContent: 'center',
-        flex: 1,
+    tab: {
+        backgroundColor: Colors.tabBar,
     },
-    buttonContainer: {
-        paddingTop: 20,
+    tabText: {
+        color: "#888"
     },
-    btn: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: '#444',
-        width: 256,
+    activeTab: {
+        backgroundColor: Colors.tabBar
+    },
+    activeTabText: {
+        color: Colors.linkColor
     }
 });
+
+
+export default createStackNavigator({Lott22ie: LottieScreen});

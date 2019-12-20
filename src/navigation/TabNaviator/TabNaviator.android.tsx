@@ -15,6 +15,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
     },
     {
         activeColor: Colors.tabSelected,
+        shifting: false,
         barStyle: {
             backgroundColor: Colors.tabBar
         }

@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     iconContainer: {
         width: 160,
         height: 44,
-        borderRadius: 10,
+        borderRadius: 20,
         alignItems: 'center',
         justifyContent: 'center',
     },

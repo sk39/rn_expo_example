@@ -1,5 +1,3 @@
-/* eslint-enable import/no-unresolved, import/extensions */
-
 const getPlatformElevation = elevation => {
     if (elevation === 0) {
         return {

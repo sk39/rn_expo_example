@@ -1,36 +1,11 @@
 import React, {Component} from 'react';
-import {Platform, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {observer} from "mobx-react";
 import {Container, Text} from 'native-base';
 import CounterStore from "./CounterStore";
-import TabBarIcon from "../../navigation/TabNaviator/TabBarIcon";
 
 @observer
 export default class CounterScreen extends Component<NavigationProps> {
-
-    static navigationOptions = {
-        title: 'Counter Example',
-        headerStyle: {
-            backgroundColor: '#d7c959',
-        },
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-            fontWeight: 'bold',
-        },
-        headerBackTitleVisible: false,
-        tabBarLabel: "Counter",
-        tabBarIcon: ({focused, tintColor}) => (
-            <TabBarIcon
-                focused={focused}
-                color={tintColor}
-                name={
-                    Platform.OS === 'ios'
-                        ? `ios-information-circle${focused ? '' : '-outline'}`
-                        : 'md-information-circle'
-                }
-            />
-        )
-    };
 
     store: CounterStore = new CounterStore();
 

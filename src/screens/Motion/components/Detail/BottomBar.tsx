@@ -16,14 +16,14 @@ export default class BottomButtons extends PureComponent<Props> {
                     <Button
                         isHidden={isHidden}
                         title="Sell"
-                        backgroundColor="#333"
+                        backgroundColor="#505e85"
                     />
                 </View>
                 <View style={styles.flexContainer}>
                     <Button
                         isHidden={isHidden}
                         title="Buy"
-                        backgroundColor="#c33"
+                        backgroundColor="#cc4151"
                         delay={125}
                     />
                 </View>
@@ -47,6 +47,8 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        // color:"#505e85"
+        // color:"#cc4151"
     },
 });
 

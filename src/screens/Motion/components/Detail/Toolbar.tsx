@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react';
 import {StyleSheet, Text, TouchableWithoutFeedback, View} from 'react-native';
 import {Feather, Ionicons} from '@expo/vector-icons';
 import translateAndOpacity from '../animations/translateAndOpacity';
+import ViewUtils from "@common/utils/ViewUtils";
 
 class Toolbar extends PureComponent<any> {
     render() {
@@ -37,8 +38,7 @@ const styles = StyleSheet.create({
         flexDirection: "row"
     },
     statusBar: {
-        height: 24,
-        // backgroundColor: 'white',
+        height: ViewUtils.isIphoneX() ? 48 : 24, //TODO:
     },
     titleBackText: {
         color: 'white',

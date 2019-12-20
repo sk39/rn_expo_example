@@ -3,31 +3,44 @@ import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import {observer} from "mobx-react";
 import {Container} from 'native-base';
 import Colors from "../../constants/Colors";
-import Layout from "../../constants/Layout";
 import GradientLineExample from "./examples/GradientLineExample";
 import AreaStackWithAxisExample from "./examples/AreaStackWithAxisExample";
-import PieChartWithCenteredLabels from "./examples/PieChartWithCenteredLabels";
+import PieChartExample from "./examples/PieChartExample";
+import AreaChartExample from "./examples/AreaChartExample";
+import {Card} from "react-native-elements";
+import {TabBarIcon} from "@common/components/ScreenIcon";
 
 @observer
 export default class ChartScreen extends Component<NavigationProps> {
 
+    static navigationOptions = {
+        tabBarLabel: "Chart",
+        tabBarIcon: ({focused}) => (
+            <TabBarIcon screenName="Chart" focused={focused}/>
+        )
+    };
 
     render() {
         return (
             <Container style={styles.container}>
                 <ScrollView>
-                    <View style={styles.chartRow}>
-                        <Text style={styles.chartRowTitle}>PieChartWithCenteredLabels</Text>
-                        <PieChartWithCenteredLabels/>
-                    </View>
-                    <View style={styles.chartRow}>
-                        <Text style={styles.chartRowTitle}>GradientLineExample</Text>
+                    <Card containerStyle={styles.chartRow}>
+                        <Text style={styles.chartRowTitle}>Pie Chart</Text>
+                        <PieChartExample/>
+                    </Card>
+                    <Card containerStyle={styles.chartRow}>
+                        <Text style={styles.chartRowTitle}>Gradient Line Chart</Text>
                         <GradientLineExample/>
-                    </View>
-                    <View style={styles.chartRow}>
-                        <Text style={styles.chartRowTitle}>AreaStackWithAxisExample</Text>
+                    </Card>
+                    <Card containerStyle={styles.chartRow}>
+                        <Text style={styles.chartRowTitle}>Area Chart</Text>
+                        <AreaChartExample/>
+                    </Card>
+                    <Card containerStyle={styles.chartRow}>
+                        <Text style={styles.chartRowTitle}>Area Stack Chart</Text>
                         <AreaStackWithAxisExample/>
-                    </View>
+                    </Card>
+                    <View style={{paddingBottom: 24}}/>
                 </ScrollView>
             </Container>
         );
@@ -37,17 +50,19 @@ export default class ChartScreen extends Component<NavigationProps> {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        // backgroundColor: Colors.backColor,
-        alignItems: 'center',
-        justifyContent: 'center',
+        paddingTop: 32,
+        backgroundColor: Colors.backColor,
     },
     chartRow: {
-        width: Layout.window.width - 16,
-        marginTop: 40
+        backgroundColor: Colors.cardBackColor,
+        borderRadius: 5,
+        borderColor: Colors.cardBorderColor,
+        padding: 0,
     },
     chartRowTitle: {
         color: Colors.tabDefault,
-        fontSize: 18,
-        paddingBottom: 4
+        fontSize: 16,
+        paddingVertical: 8,
+        textAlign: "center"
     }
 });

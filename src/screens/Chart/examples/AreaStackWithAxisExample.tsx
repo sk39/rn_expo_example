@@ -1,12 +1,11 @@
-import React from 'react'
+import React, {Component} from 'react'
 import {Grid, StackedAreaChart, YAxis} from 'react-native-svg-charts'
 import * as shape from 'd3-shape'
 import {View} from 'react-native'
 
-class AreaStackWithAxisExample extends React.PureComponent {
+export default class AreaStackWithAxisExample extends Component {
 
     render() {
-
         const data = [
             {
                 month: new Date(2015, 0, 1),
@@ -38,14 +37,14 @@ class AreaStackWithAxisExample extends React.PureComponent {
             },
         ]
 
-        const colors = ['rgb(138, 0, 230, 0.8)', 'rgb(173, 51, 255, 0.8)', 'rgb(194, 102, 255, 0.8)', 'rgb(214, 153, 255, 0.8)']
-        const keys = ['apples', 'bananas', 'cherries', 'dates']
+        const colors = ['rgb(138, 0, 230, 0.5)', 'rgb(173, 51, 255, 0.4)', 'rgb(194, 102, 255, 0.3)', 'rgb(214, 153, 255, 0.2)'];
+        const keys = ['apples', 'bananas', 'cherries', 'dates'];
 
         return (
             <View style={{flexDirection: 'row', height: 200}}>
                 <StackedAreaChart
                     style={{flex: 1}}
-                    contentInset={{top: 10, bottom: 10}}
+                    contentInset={{top: 10, bottom: 0}}
                     data={data}
                     keys={keys}
                     colors={colors}
@@ -61,7 +60,7 @@ class AreaStackWithAxisExample extends React.PureComponent {
                     svg={{
                         fontSize: 8,
                         fill: 'white',
-                        stroke: 'black',
+                        stroke: 'white',
                         strokeWidth: 0.1,
                         alignmentBaseline: 'baseline',
                         baselineShift: '3',
@@ -71,5 +70,3 @@ class AreaStackWithAxisExample extends React.PureComponent {
         )
     }
 }
-
-export default AreaStackWithAxisExample;

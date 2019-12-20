@@ -1,34 +1,10 @@
 import React, {PureComponent} from 'react';
-import {Animated, StyleSheet, Text, TouchableWithoutFeedback, View,} from 'react-native';
-import {Feather, Ionicons} from '@expo/vector-icons';
+import {StyleSheet, Text, View,} from 'react-native';
 import translateAndOpacity from '../animations/translateAndOpacity';
 import {Icon} from "react-native-elements";
 import Colors from "../../../../constants/Colors";
 
 class Toolbar extends PureComponent<any, any> {
-    renderDetail() {
-        const {opacityValue, translateY} = this.state;
-        const {onBackPress} = this.props;
-
-        return (
-            <View style={styles.container}>
-                <View style={styles.statusBar}/>
-                <TouchableWithoutFeedback onPress={onBackPress}>
-                    <Animated.View>
-                        <View style={styles.toolbarContainer}>
-                            <View style={styles.backContainer}>
-                                <Ionicons name="ios-arrow-back" size={24} color="white"/>
-                                <Text style={styles.titleBackText}>Back</Text>
-                            </View>
-                            <View style={styles.menuIconContainer}>
-                                <Feather name="share" size={24} color="white"/>
-                            </View>
-                        </View>
-                    </Animated.View>
-                </TouchableWithoutFeedback>
-            </View>
-        );
-    }
 
     render() {
         return (

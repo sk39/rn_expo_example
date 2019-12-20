@@ -1,5 +1,3 @@
-import {action, observable} from "mobx";
-
 /**
  * TODO: Global state.
  */

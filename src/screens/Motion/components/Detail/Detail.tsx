@@ -1,11 +1,10 @@
 import React, {PureComponent} from 'react';
-import {Animated, Easing, FlatList, StyleSheet, Text, View} from 'react-native'
+import {Easing, FlatList, StyleSheet, Text, View} from 'react-native'
 import {SharedElement, TranslateYAndOpacity} from 'react-native-motion';
 import Toolbar from './Toolbar';
 import BottomBar from './BottomBar';
 import {ListItem} from "../ListItem";
-import GradientLineExample from "../../../Chart/examples/GradientLineExample";
-
+import DetailAreaChart from "./DetailAreaChart";
 
 const DummyList = [
     {
@@ -61,7 +60,7 @@ class Detail extends PureComponent<any, any> {
         }
 
         return (
-            <TranslateYAndOpacity isHidden={phase !== 'phase-2'} delay={28 * delay}>
+            <TranslateYAndOpacity isHidden={phase !== 'phase-2'} delay={32 * delay}>
                 <View style={styles.itemContainer}>
                     <View style={styles.rowContainer}>
                         <View style={styles.titleContainer}>
@@ -74,6 +73,18 @@ class Detail extends PureComponent<any, any> {
                     </Text>
                 </View>
             </TranslateYAndOpacity>
+        );
+    };
+    renderChart = () => {
+        const {phase} = this.props;
+        return (
+            <View>
+                <TranslateYAndOpacity
+                    isHidden={phase !== 'phase-2'}
+                    delay={32 * (DummyList.length + 2)}>
+                    <DetailAreaChart/>
+                </TranslateYAndOpacity>
+            </View>
         );
     };
 
@@ -120,17 +131,14 @@ class Detail extends PureComponent<any, any> {
                         />
                     </View>
                 </SharedElement>
+                <View style={{marginTop: 8}}/>
                 <FlatList
                     data={DummyList}
                     extraData={phase}
                     keyExtractor={item => item.amount}
                     renderItem={this.renderItem}
                 />
-                <Animated.View style={[styles.chartContainer, {
-                    opacity: opacityOfDestinationItem,
-                }]}>
-                    <GradientLineExample/>
-                </Animated.View>
+                {this.renderChart()}
                 <BottomBar isHidden={phase === 'phase-3'}/>
             </View>
         );
@@ -152,9 +160,6 @@ const styles = StyleSheet.create({
     rowContainer: {
         alignItems: 'center',
         flexDirection: "row"
-    },
-    chartContainer: {
-        marginBottom: 90, // TODO:
     },
     titleText: {
         color: '#f1f1f1',

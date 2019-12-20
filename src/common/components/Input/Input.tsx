@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {Input as ElInput} from "react-native-elements";
+import React, {PureComponent} from "react";
+import {IconNode, Input as ElInput} from "react-native-elements";
 import {StyleSheet} from "react-native";
 import InputState from "./InputState";
 import {observer} from "mobx-react";
@@ -10,17 +10,17 @@ interface Props {
     inputState: InputState,
     label: string;
     secureTextEntry?: boolean;
-    leftIcon?: any // TODO:
+    leftIcon?: IconNode;
 }
 
 @observer
-export default class Input extends Component<Props> {
+export default class Input extends PureComponent<Props> {
     render() {
         const {inputState, label, secureTextEntry, leftIcon} = this.props;
         return (
             <ElInput inputStyle={styles.input}
                      label={label}
-                     selectionColor='#a376c2'
+                     selectionColor={Colors.primaryColor}
                      leftIcon={leftIcon}
                      containerStyle={styles.inputContainer}
                      secureTextEntry={secureTextEntry}

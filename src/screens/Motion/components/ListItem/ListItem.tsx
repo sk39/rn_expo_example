@@ -4,7 +4,7 @@ import {ScaleAndOpacity} from 'react-native-motion';
 
 import Header from './Header';
 import Content from './Content';
-import {getPlatformElevation} from '../../utils';
+import {getPlatformElevation} from '@common/utils/getPlatformElevation';
 
 interface Props {
     onPress?: Function;
@@ -44,12 +44,12 @@ export default class ListItem extends Component<Props> {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#3c3c50',
+        backgroundColor: '#48485f',
         marginHorizontal: 16,
         marginVertical: 4,
         paddingVertical: 8,
         paddingHorizontal: 16,
         borderRadius: 5,
-        ...getPlatformElevation(2),
+        ...getPlatformElevation(10),
     },
 });

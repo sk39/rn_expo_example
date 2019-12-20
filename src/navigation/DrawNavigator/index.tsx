@@ -8,6 +8,7 @@ const DrawNavigator = createDrawerNavigator(
     },
     {
         drawerPosition: "right",
+        hideStatusBar: true,
         contentComponent: DrawerMenu
     }
 );
