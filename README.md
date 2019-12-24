@@ -15,8 +15,7 @@ Expo + Typescript + Mobx.
 <img width="234" alt="list" src="https://user-images.githubusercontent.com/28267362/71422267-d14a3100-26c3-11ea-9f20-bb145a12c079.png">
 
 <img width="234" alt="detail" src="https://user-images.githubusercontent.com/28267362/71422269-d4ddb800-26c3-11ea-9bc8-beacec625436.png">
-</div
-
+</div>
 
 ### Main dependencies
 * [expo](https://github.com/expo/expo)
