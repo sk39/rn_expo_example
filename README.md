@@ -21,6 +21,6 @@ Expo + Typescript + Mobx.
 * [expo](https://github.com/expo/expo)
 * [mobx](https://github.com/mobxjs/mobx)
 * [native-base](https://github.com/GeekyAnts/NativeBase)
-* [react-navigatio](https://github.com/react-navigation/react-navigation)
+* [react-navigation](https://github.com/react-navigation/react-navigation)
 * [react-native-motion](https://github.com/xotahal/react-native-motion)
 * [react-native-svg-charts](https://github.com/JesperLekland/react-native-svg-charts)
