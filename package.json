@@ -15,7 +15,7 @@
   "dependencies": {
     "@expo/samples": "^3.0.3",
     "@sk39/lottie-files": "0.0.1",
-    "expo": "^36.0.0",
+    "expo": "^48.0.0",
     "expo-font": "~8.0.0",
     "expo-linear-gradient": "~8.0.0",
     "expo-web-browser": "~8.0.0",
